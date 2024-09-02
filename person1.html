@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person 1 - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="person1.html">@Mia</a></li>
+            <li><a href="person2.html">@Rj</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Jezleah Mae Ramos</h1>
+        <div class="work-gallery">
+            <div class="work-item" onclick="toggleExpand('aboutMe')">
+                <img src="mia1.jpg" alt="About Me">
+                <h3>About Me</h3>
+                <p>Click to learn more about me.</p>
+                <div id="aboutMe" class="expandable-content">
+                    <p>Hi! I’m Jezleah Mae Ramos, but you can call me by my nickname “ mia” . Born on February 05, 2004 in Luna Roxas Isabela . I’m from Doña Concha Roxas Isabela. My parents are Roena Ramos and Angelo Generoso Ramos.  I love music, and also watching movies.</p>
+                </div>
+            </div>
+            <div class="work-item" onclick="toggleExpand('contacts')">
+                <img src="telephone-icon-whatsapp-logo-phone-600nw-1169104867.webp" alt="Contacts">
+                <h3>Contacts</h3>
+                <p>Click to view my contact information.</p>
+                <div id="contacts" class="expandable-content">
+                    <p>Contact Number: 09995716319</p>
+                    <p>Email: <a href="mailto:ramosjezleah246@gmail.com">ramosjezleah246@gmail.com</a></p>
+                    <p>Facebook: <a href="https://www.facebook.com/jzlh.rms" target="_blank">Jezleah Ramos</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/jzlh.rms" target="_blank">@jzlh.rms</a></p>
+                    <p>Telegram: <a href="https://web.telegram.org/k/#@frantuna" target="_blank">@frantuna</a></p>
+                </div>
+            </div>
+            <div class="work-item" onclick="toggleExpand('personalInfo')">
+                <img src="mia2.jpg" alt="Personal Info">
+                <h3>Personal Info (Summary)</h3>
+                <p>Click to view my personal information.</p>
+                <div id="personalInfo" class="expandable-content">
+                    <p>Name: Jezleah Mae Remegio Ramos</p>
+                    <p>Nickname: Mia</p>
+                    <p>Born: February 5, 2004 in Luna Roxas, Isabela</p>
+                    <p>Currently Studying at Isabela State University - Roxas Campus (Bachelor of Science in Information Technology - Under Graduate)</p>
+                    <p>Age: 20 Years Old</p>
+                </div>
+            </div>
+
+            <!-- New Video Section -->
+            <div class="work-item video-item">
+                <video controls>
+                    <source src="miavid (2).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Hi, Im Jezleah Ramos</h3>
+                <p>I hope you enjoy watching this short video of me .</p>
+            </div>
+            
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Jezleah Ramos. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/jzlh.rms" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/jzlh.rms" target="_blank">Instagram</a> |
+                <a href="https://web.telegram.org/k/#@frantuna" target="_blank">Telegram</a> |
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleExpand(id) {
+            const content = document.getElementById(id);
+            const allContents = document.querySelectorAll('.expandable-content');
+
+            // Close all other expandable contents
+            allContents.forEach((section) => {
+                if (section !== content) {
+                    section.classList.remove('expanded');
+                }
+            });
+
+            // Toggle the selected content
+            content.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>

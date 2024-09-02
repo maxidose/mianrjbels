@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person 1 - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="person1.html">@Mia</a></li>
+            <li><a href="person2.html">@Rj</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Rome-Jake Novesteras</h1>
+        <div class="work-gallery">
+            <div class="work-item" onclick="toggleExpand('aboutMe')">
+                <img src="rj2.jpg" alt="About Me">
+                <h3>About Me</h3>
+                <p>Click to learn more about me.</p>
+                <div id="aboutMe" class="expandable-content">
+                    <p>Hi! I’m Rome-Jake Ares Novesteras, but you can call me by my nickname  “RJ” or “ARJE”. Born on December 27, 2003 in Our own House. I’m from San Rafael Roxas Isabela. My parents are Romel Novesteras and Jackielyn Novesteras.</p>
+                </div>
+            </div>
+            <div class="work-item" onclick="toggleExpand('contacts')">
+                <img src="telephone-icon-whatsapp-logo-phone-600nw-1169104867.webp" alt="Contacts">
+                <h3>Contacts</h3>
+                <p>Click to view my contact information.</p>
+                <div id="contacts" class="expandable-content">
+                    <p>Contact Number: 09666424883</p>
+                    <p>Email: <a href="mailto:romejakenovesteras@gmail.com">romejakenovesteras@gmail.com</a></p>
+                    <p>Facebook: <a href="https://www.facebook.com/romejake.novesteras.27" target="_blank">Rome-Jake Novesteras</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/nvstrsrj45" target="_blank">@nvstrsrj45</a></p>
+                    <p>Telegram: <a href="https://web.telegram.org/k/#@Rjnvstrs" target="_blank">@Rjnvstrs</a></p>
+                </div>
+            </div>
+            <div class="work-item" onclick="toggleExpand('personalInfo')">
+                <img src="rj1.jpg" alt="Personal Info">
+                <h3>Personal Info (Summary)</h3>
+                <p>Click to view my personal information.</p>
+                <div id="personalInfo" class="expandable-content">
+                    <p>Name: Rome-Jake Novesteras</p>
+                    <p>Nickname: Rj / ARJE</p>
+                    <p>Born: December 27, 2003 in San Rafael Roxas, Isabela</p>
+                    <p>Currently Studying at Isabela State University - Roxas Campus (Bachelor of Science in Information Technology - Under Graduate)</p>
+                    <p>Age: 21 Years Old</p>
+                </div>
+            </div>
+
+            <!-- New Video Section -->
+            <div class="work-item video-item">
+                <video controls>
+                    <source src="rjvid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Hi, Im Rome-Jake Novesteras</h3>
+                <p>I hope you enjoy watching this short video of me .</p>
+            </div>
+            
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Rome-Jake Novesteras. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/romejake.novesteras.27" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/nvstrsrj45" target="_blank">Instagram</a> |
+                <a href="https://web.telegram.org/k/#@Rjnvstrs" target="_blank">Telegram</a> |
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleExpand(id) {
+            const content = document.getElementById(id);
+            const allContents = document.querySelectorAll('.expandable-content');
+
+            // Close all other expandable contents
+            allContents.forEach((section) => {
+                if (section !== content) {
+                    section.classList.remove('expanded');
+                }
+            });
+
+            // Toggle the selected content
+            content.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
